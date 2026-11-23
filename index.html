@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/ricardo.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Manrope,sans-serif' font-size='28' font-weight='600' fill='%23beaf87'%3ERS%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/wise-real-estate-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap">
@@ -103,12 +103,10 @@ section{padding-block:var(--s-800)}
 
 /* Nav (B7) */
 .nav{position:fixed;top:calc(var(--s-200) + env(safe-area-inset-top,0px));left:0;right:0;z-index:40;display:flex;justify-content:center;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));pointer-events:none}
-.nav-bar{pointer-events:auto;display:flex;align-items:center;gap:var(--s-300);padding:var(--s-75) var(--s-100) var(--s-75) var(--s-200);border-radius:16px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:var(--shadow);max-width:100%}
+.nav-bar{pointer-events:auto;display:flex;align-items:center;gap:var(--s-200);padding:var(--s-75) var(--s-100) var(--s-75) var(--s-200);border-radius:16px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:var(--shadow);max-width:100%}
 .nav-logo{display:flex;align-items:center;gap:var(--s-100);text-decoration:none}
-.nav-logo img{height:36px;width:auto}
-.nav-logo .logo-dark{display:block}.nav-logo .logo-light{display:none}
-:root[data-theme="dark"] .nav-logo .logo-dark{display:none}:root[data-theme="dark"] .nav-logo .logo-light{display:block}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .nav-logo .logo-dark{display:none}:root:not([data-theme="light"]) .nav-logo .logo-light{display:block}}
+.nav-logo img{height:60px;width:auto;max-width:104px;object-fit:contain;background:#000;border-radius:9px;padding:6px 8px}
+.nav-ami{font-size:12px;line-height:16px;white-space:nowrap;font-weight:700;letter-spacing:.025em;color:var(--accent-strong);border-left:1px solid var(--line);padding-left:var(--s-200)}
 .nav-links{display:flex;align-items:center;gap:var(--s-50)}
 .nav-links a{text-decoration:none;padding:var(--s-50) var(--s-100);border-radius:8px;color:var(--muted);transition:color .3s var(--ease),background-color .3s var(--ease)}
 .nav-links a:hover{color:var(--fg);background:var(--line-soft)}
@@ -127,10 +125,11 @@ section{padding-block:var(--s-800)}
 @media (max-width:860px){
   .nav-links{display:none}.nav-toggle{display:block}
   .nav-bar{width:100%;justify-content:space-between;padding-right:var(--s-75)}
+  .nav-ami{margin-right:auto}
 }
 
 /* Hero */
-.hero{padding-top:calc(var(--s-900) + 56px);padding-bottom:var(--s-800)}
+.hero{padding-top:calc(var(--s-900) + 74px);padding-bottom:var(--s-800)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s-700);align-items:center}
 .hero-copy{display:flex;flex-direction:column;gap:var(--s-300);max-width:680px}
 .hero h1{background:linear-gradient(90deg,var(--hero-a),var(--hero-b));-webkit-background-clip:text;background-clip:text;color:transparent;max-width:680px}
@@ -140,7 +139,7 @@ section{padding-block:var(--s-800)}
 .proof svg{width:20px;height:20px;color:var(--accent-strong);flex:none}
 .card-person{position:relative;background:var(--card-dark);color:var(--on-dark);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);max-width:440px;margin-left:auto;width:100%}
 .card-person .card-top{display:flex;justify-content:center;padding:var(--s-400) var(--s-400) 0}
-.card-person .card-top img{height:48px;width:auto}
+.card-person .card-top img{height:100px;width:auto;max-width:100%;object-fit:contain}
 .card-person .portrait{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top}
 .card-person .card-bottom{padding:0 var(--s-400) var(--s-400);display:flex;flex-direction:column;gap:var(--s-50)}
 .card-person .card-bottom .eyebrow{color:var(--accent)}
@@ -148,7 +147,7 @@ section{padding-block:var(--s-800)}
 .card-person .contact-lines span{display:flex;align-items:center;gap:var(--s-75)}
 .card-person .contact-lines svg{width:16px;height:16px;color:var(--accent)}
 @media (max-width:860px){
-  .hero{padding-top:calc(var(--s-800) + 56px)}
+  .hero{padding-top:calc(var(--s-800) + 74px)}
   .hero-grid{grid-template-columns:1fr;gap:var(--s-500)}
   .card-person{margin-left:0;max-width:100%}
 }
@@ -273,7 +272,7 @@ form{display:flex;flex-direction:column;gap:var(--s-300)}
 footer{border-top:1px solid var(--line);padding-block:var(--s-600) var(--s-400)}
 .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--s-400)}
 .foot-col{display:flex;flex-direction:column;gap:var(--s-100)}
-.foot-col img{height:40px;width:auto;align-self:flex-start;object-fit:contain}
+.foot-col img{height:90px;width:auto;max-width:160px;align-self:flex-start;object-fit:contain;background:#000;border-radius:12px;padding:8px 12px}
 .foot-col a{text-decoration:none;color:var(--muted);transition:color .3s var(--ease)}
 .foot-col a:hover{color:var(--accent-strong)}
 .foot-col .label{font-size:12px;line-height:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-strong)}
@@ -293,9 +292,9 @@ footer{border-top:1px solid var(--line);padding-block:var(--s-600) var(--s-400)}
 <nav class="nav" aria-label="Principal">
   <div class="nav-bar">
     <a class="nav-logo" href="#inicio" aria-label="Wise Real Estate, início">
-      <img class="logo-dark" src="assets/wise-logo-dark.png" alt="Wise Real Estate">
-      <img class="logo-light" src="assets/wise-logo-white.png" alt="">
+      <img src="assets/wise-real-estate-logo.png" alt="Wise Real Estate — Oliveira do Hospital">
     </a>
+    <span class="nav-ami" aria-label="Licença AMI 24882">AMI: 24882</span>
     <div class="nav-links title-4">
       <a href="#inicio" aria-current="page">Início</a>
       <a href="#sobre">Sobre</a>
@@ -336,7 +335,7 @@ footer{border-top:1px solid var(--line);padding-block:var(--s-600) var(--s-400)}
       </p>
     </div>
     <article class="card-person" aria-label="Cartão do consultor">
-      <div class="card-top"><img src="assets/wise-logo-white.png" alt="Wise Real Estate"></div>
+      <div class="card-top"><img src="assets/wise-real-estate-logo.png" alt="Wise Real Estate"></div>
       <img class="portrait" src="assets/ricardo.png" alt="Ricardo Sousa, consultor imobiliário, de fato azul escuro e gravata, a sorrir">
       <div class="card-bottom">
         <span class="eyebrow">Consultor imobiliário</span>
@@ -608,8 +607,9 @@ footer{border-top:1px solid var(--line);padding-block:var(--s-600) var(--s-400)}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <img src="assets/wise-logo-gold.png" alt="Wise Real Estate">
+        <img src="assets/wise-real-estate-logo.png" alt="Wise Real Estate">
         <span class="title-2">Ricardo Sousa</span>
+        <span class="caption-2 muted">AMI: 24882</span>
         <span class="caption-2 muted">Consultor imobiliário · Wise Real Estate Oliveira do Hospital</span>
       </div>
       <div class="foot-col caption-2">
